@@ -1,22 +1,147 @@
 const app = document.querySelector('.app');
 const memories = {
-    'philly_cheesesteak': {
-        'url': 'https://lh3.googleusercontent.com/l1SLt4UkcTx1qdbVnH3CSt55tUEEibfu3vTgFjd9UqVnHuZC58s131RTBoDKqW_gTqKwL-HJ0T4wMwTvHtPAIgHqFsuQgHYeeK9dk68KbUmvqnR8B_hq2rm7KiEzORbDnJx3lIxh3B633RXwQ7g4hgS8m-2y9cwfStKaC1P_M6q3w6oKN-x8YH9pvw1mWZU5oiPqXTnLjcQ8nR6YeGC0c0fehybL7adDrnLXOFR_-oMsAmZNC2OpMU9Vgj4jksUW7TQHwV57yQM0YT6katlB_7URaix3Iu3Q2b_yXTs4KJ3fzG0wlLDVZxAgz2CHOJ0vDRPhgJLUZom6CoZwqvc_PNoWkERsRmDJU30aTyyp8PBt4YyFzrdbmS-W6o7AmXTCuqAB2vNu48ucjVlfkDe9qFAW260om8QVS4_yQcP-Rc0-K2bR7rOIqmmr8fAzFT7wT14Sq_oIQ9uQ6kieNIJh7jzAJfoPbXOL8TPNF4YhhS0sQB_ok5b_ukWTN6bfGpoxWFwbFAa2zgbQ53_GOx7kg6Q0HeCXMF3Pro0gnovELbTZbgomHbSJM9PTYJc7Tl-79Ol2r-6lwnRGrL_J-J7Xk0dsyt-xOHGoLVoWQp-mLZspKdQ-DYCP3UnuwwTs4xQTyunZBBww130CIrAKWgoFqYW2Gd2n-4OXFZA84nt-8Z8ypSBh6rdShOQpcRmYV-mc4JDILOEhLzuQtoQRl9_fP9U=w464-h933-no?authuser=0',
-        'text': 'hehe',
+    'most-amazing-person-ever': {
+        'url': 'images/Snapchat-1748312008.JPG',
+        'text': 'All of this is for the most amazing person in the world, Isabella Akhtar',
+        'is_closed': true
+    },
+    'hospital': {
+        'url': 'images/download_hospital.JPG',
+        'text': 'I know you\'ve had a lot of trips to hospitals and doctors, and I know your life hasn\'t been the best, but it will get better. You will heal in every way, and all the sucky bits will become just memories',
+        'is_closed': true
+    },
+    'Mm': {
+        'url': 'images/download_mm.JPG',
+        'text': 'Toilets exist for a reason. Take all the dumb shit you think about yourself, and put it there. Then you can realize how goddamn amazing you are',
+        'is_closed': true
+    },
+    'mirror': {
+        'url': 'images/download_mirror-pose.JPG',
+        'text': 'You\'re cute',
+        'is_closed': true
+    },
+    'hugging': {
+        'url': 'images/IMG_20220221_222715.JPG',
+        'text': '<3',
+        'is_closed': true
+    },
+    'bathtub': {
+        'url': 'images/download_bathtub.JPG',
+        'text': 'Bathtub!',
+        'is_closed': true
+    },
+    'tongue-out': {
+        'url': 'images/download_tongue-out2.JPG',
+        'text': 'I know at one point I said this was my favorite picture I had of you. That\'s not true. You are the only thing a picture needs for it to be my favorite, so any with you are my favorite. It\'s still a good picture though',
+        'is_closed': true
+    },
+    'outside-hug': {
+        'url': 'images/IMG_20220221_222922.JPG',
+        'text': 'No matter how cold it is outside, you warm my heart enough that I won\'t ever get cold',
+        'is_closed': true
+    },
+    'fboy': {
+        'url': 'images/download_izzy-fboy.JPG',
+        'text': 'I still think you are good at the face. There\'s nothing you can do to convince me otherwise',
+        'is_closed': true
+    },
+    'wyatt-face': {
+        'url': 'images/download_wyatt-face.JPG',
+        'text': 'I may have finally gotten over my regret of sending this to you. Maybe...',
+        'is_closed': true
+    },
+    'mirror-hug': {
+        'url': 'images/IMG_20220221_222719.JPG',
+        'text': 'You put a smile on my face :)',
+        'is_closed': true
+    },
+    'bikini': {
+        'url': 'images/download_bikini-pose.JPG',
+        'text': 'Skinny ass :p',
+        'is_closed': true
+    },
+    'night-a-star-was-born': {
+        'url': 'images/IMG_20211109_232823341.JPG',
+        'text': 'Even if I protest gifts, I still appreciate the thought and effort that you put into them. Thank you for the gifts. That being said, next time you think about getting me anything I\'m gonna throw a fit',
+        'is_closed': true
+    },
+    'pose': {
+        'url': 'images/download_pose.JPG',
+        'text': 'Pretty, cute, beautiful, gorgeous, perfect, hot, flawless, etc. There aren\'t enough words in the English language to describe you',
+        'is_closed': true
+    },
+    'bat': {
+        'url': 'images/IMG_20220221_225118.JPG',
+        'text': 'All the first times we hung out and bonked each other, and when you got absolutely destroyed in Jenga were absolutely amazing. I wouldn\'t trade anything in the world for them.',
+        'is_closed': true
+    },
+    'florida-night': {
+        'url': 'images/download_tongue-out.JPG',
+        'text': 'You\'re attractive as hell when you\'re this confident. Actually you\'re always attractive as hell',
+        'is_closed': true
+    },
+    'crazy-hair': {
+        'url': 'images/download_crazy-hair.JPG',
+        'text': 'Crazy hairrrrrrrr',
+        'is_closed': true
+    },
+    'cuddling': {
+        'url': 'images/download_cuddle.JPG',
+        'text': 'Cuddling with you is fantastic. I would recommend it to everyone, but that means it wouldn\'t be reserved for me, so I can\'t do that',
+        'is_closed': true
+    },
+    'ACL': {
+        'url': 'images/IMG_7597-900x675.JPG',
+        'text': 'Even if you don\'t believe in yourself, I believe in you and that you will get into MATA. You\'re gonna have an amazing time in culinary arts next year',
+        'is_closed': true
+    },
+    'slumped': {
+        'url': 'images/download_slumped.JPG',
+        'text': 'Sorry this is just funny',
+        'is_closed': true
+    },
+    'mohawk': {
+        'url': 'images/Snapchat-1760562063.JPG',
+        'text': 'I couldn\'t resist adding the bad hair pictures',
+        'is_closed': true
+    },
+    '90-degree': {
+        'url': 'images/Snapchat-1581651479.JPG',
+        'text': 'Math class wasn\'t enough so I had to do math with my hair too. I wonder what the length of the hypotenuse is..?',
+        'is_closed': true
+    },
+    'volcano': {
+        'url': 'images/Snapchat-378899703.JPG',
+        'text': 'Volcano hair!',
+        'is_closed': true
+    },
+    'surfing': {
+        'url': 'images/Snapchat-516861480.JPG',
+        'text': 'Hair surfing! Lowkey have no idea how this happened but it\'s kinda sick.',
         'is_closed': true
     }
 }
 const myeyes = {
     'rocket': {
-        'url': 'https://lh3.googleusercontent.com/C8H0M7g5fJrO5vbkDJd0CcpgtGdyp03tRM232fRupOhKm5KfT-FusgwRQIBfAFR6RI_9Hie4kMp9PUHez-DKOOGvo-ur7aQCvmgWa9j0nM6Tey72iq7M5lWbzqIMJfKlOPVKHMy9ADWO-0CxAEa0DqlvfYlZ2ybSyg_cZuCNY1awRP-Ki7HmSPxyrMD7W__q7u4Iwj94YFOqXWmE4W-DOm33b7582_Z0k76kNE99JWVFo0_XfVti1dW8tzWyso0hxJ_2Jd7fYxzXBrTX9XO9PF1DA3-8Q6nmb4nK3LhkcCO3l_a3YMMwsEyBuxC2_2c5z2JaKWaYR8scp3_Vt0Dl-a_L52T7m3YQGaf4xnfRZUZz_TNqxGxD-3anbjJI9vDi-Ysrt6qKgrouA3aSrPY2ZfLgNKD9s7GDn7R38qq9Cl-PLfH-eagdaFa0tlTYGRoSjWu9PiKbNdR51PE45lGCy72AxItUr8p1FAXY5GFc74pFZTN3-qeQQTdqlp3TLRC-QtMNriyul3iQB1dOHD85Hykx6VJ-TpZTqnmTGlmcDsIWUbBZ_mon_InBxfyT2JXAcdrOdzZ9nEXVUh8mw_peGdEWvOz57LBvEwIzPi4xnLg4WEt6QLZAy7Kkche1BWpScLCQsaNg0LejP_WAhDH-1gF_g2j9fMzxWC9SKVbu_GrULayJw2TIlbv92_xL3FfcFiGkObrLL_BvE9sXTkcgqbk=w700-h933-no?authuser=0',
-        'text': 'hehe',
+        'url': 'images/Snapchat-195223921.JPG',
+        'text': 'We\'re on the rocketship all by ourselves. There\'s one bedroom and one bathroom and one kitchen and a TV room. The architecture is really cool. We wake up in our bed that we share and cuddle. Then I carry you down the stairs to the kitchen. There\'s an island with stools and put you down at one while I make you a good breakfast. I kiss you while I make it and then I sit next to you with a plate. We share a plate and you eat whatever you want and I have the rest. Your stomach feels amazing and you don\'t feel bloated or full at all. We go to the couch and cuddle and put on TV in the background. We kiss and hug a lot but the show is really good. After a while we turn it off and just cuddle pressed tight against each other. We do nothing but enjoy each others company. Bogey comes over and we play with bogey for a little bit. Fenton decides he wants some too so he comes to get petted for a while too. Then, I go to the kitchen and make you lunch. You hug my waist while I\'m making it and we have a really fun conversation. We sit down again and this time you sit on my lap but like a baby. I airplane the food into your mouth until you\'re full and it\'s really good, and then I let you do the same with me. I push you down and make out with you until we\'re both struggling for breath and we have to stop. So we go to the bed and I spoon you. We take a nap and I hold you tight so you feel safe and comfortable. Then we wake up and we sit criss cross applesauce facing each other in the bed and just talk for hours. We go and look out the window at space and I hug your waist and trace your back. We go back to the bed and I give you a full body massage. You decide you\'re hungry so we make an amazing gourmet meal for dinner and it\'s the best ever because we are just fantastic chefs. We talk while we eat dinner and we laugh and smile and have a great time. We have some dessert and it\'s really good. Your stomach is completely normal tho so it doesn\'t hurt and none of you hurts. We go cuddle on the couch again and I remind you of how skinny and beautiful and amazing you are. And you really are skinny and beautiful and amazing. You\'re getting sleepy so we go up to the bed and we kiss and cuddle as we both fall asleep whispering how much we love each other.',
         'is_closed': true
-    }/*,
+    },
+    'blush': {
+        'url': 'images/download_blush-filter.JPG',
+        'text': 'Probably first time I noticed your freckle. Also you just look good :)',
+        'is_closed': true
+    }
+
+
+    /*
+
     'a': {
-        'url': 'a',
-        'text': 'a',
+        'url': 'images/',
+        'text': '',
         'is_closed': true
-    }*/
+    },
+    */
 }
 var snaps_button = document.querySelector('.snaps_button');
 var myeyes_button = document.querySelector('.my_eyes_only_button');
@@ -45,7 +170,7 @@ function load_memories() {
         console.log(memory)
         let container = document.createElement('div');container.className = 'snap_container';snaps.append(container);
         let img_container = document.createElement('div');img_container.className = 'img_container';container.append(img_container);
-        let img = document.createElement('img');img.className = 'snap_image';img.src = memories[memory].url;eventFor(img, container, i);img_container.append(img)
+        let img = document.createElement('img');img.className = 'snap_image';img.src = memories[memory].url;eventFor(img, container, i);img_container.append(img);img.draggable=false;
         let text = document.createElement('div');text.className = 'snap_text';text.textContent = memories[memory].text;container.append(text)
     }
     function eventFor(image, container, i) {
@@ -56,6 +181,7 @@ function load_memories() {
                 container.classList.add('focused');
             } else {
                 memories[arr[i]].is_closed = true;
+                // https://stackoverflow.com/questions/635706/how-to-scroll-to-an-element-inside-a-div
                 container.scrollTop = 0;
                 container.classList.remove('focused');
             }
