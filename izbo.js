@@ -1,17 +1,17 @@
 const app = document.querySelector('.app');
 const memories = {
     'most-amazing-person-ever': {
-        'url': '.../images/Snapchat-1748312008.JPG',
+        'url': 'images/Snapchat-1748312008.jpg',
         'text': 'All of this is for the most amazing person in the world, Isabella Akhtar',
         'is_closed': true
     },
     'hospital': {
-        'url': '/images/download_hospital.JPG',
+        'url': 'images/download_hospital.jpg',
         'text': 'I know you\'ve had a lot of trips to hospitals and doctors, and I know your life hasn\'t been the best, but it will get better. You will heal in every way, and all the sucky bits will become just memories',
         'is_closed': true
     },
     'Mm': {
-        'url': 'images/download_mm.JPG',
+        'url': 'images/download_mm.jpg',
         'text': 'Toilets exist for a reason. Take all the dumb shit you think about yourself, and put it there. Then you can realize how goddamn amazing you are',
         'is_closed': true
     },
